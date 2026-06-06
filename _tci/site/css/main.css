@@ -1,0 +1,121 @@
+#logo {
+  width: 111px;
+  height: 110px;
+}
+
+#welcome-bird {
+  position: absolute;
+  right: 10px;
+  top: 92px;
+  text-decoration: none;
+}
+#welcome-bird > span {
+  color: black;
+  background-color: yellow;
+  padding: 0.25rem 0.5rem;
+}
+#welcome-bird:hover > span {
+  text-decoration: underline solid;
+}
+#welcome-bird::before {
+  content: "";
+  background-image: url("../images/bird.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  top: -57px;
+  right: -17px;
+  width: 70px;
+  height: 70px;
+}
+
+#seedling {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50px;
+  right: 145px;
+  user-select: none;
+}
+
+#main-navigation {
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: wrap;
+  gap: 0.5rem;
+}
+#main-navigation a,
+#main-navigation button,
+#main-navigation details {
+  position: relative;
+  display: inline-block;
+  padding: 0.75rem;
+  color: var(--color);
+  border: 1px dotted var(--border-color);
+  text-decoration: none;
+  background: var(--background-color);
+  cursor: pointer;
+  user-select: none;
+}
+#main-navigation a:hover, #main-navigation a.active,
+#main-navigation button:hover,
+#main-navigation button.active,
+#main-navigation details:hover,
+#main-navigation details.active {
+  border-style: solid;
+}
+#main-navigation a.rounded,
+#main-navigation button.rounded,
+#main-navigation details.rounded {
+  border-radius: 1.25rem;
+}
+#main-navigation details {
+  padding: 0;
+}
+#main-navigation details summary {
+  padding: 0.75rem;
+  list-style: none;
+}
+#main-navigation details summary::-webkit-details-marker {
+  display: none;
+}
+#main-navigation details #main-navigation__more-dropdown {
+  position: relative;
+}
+#main-navigation details #main-navigation__more-dropdown__list {
+  position: absolute;
+  background-color: var(--background-color);
+  border: 1px dotted var(--border-color);
+  padding: 0.25rem;
+  top: 3.25rem;
+  left: 0;
+  z-index: 5;
+}
+#main-navigation details #main-navigation__more-dropdown__list a {
+  display: block;
+  text-decoration: none;
+  padding: 0.33rem 0.5rem;
+  border: none;
+}
+#main-navigation details #main-navigation__more-dropdown__list a:hover {
+  text-decoration: underline dotted;
+}
+#main-navigation details #main-navigation__more-dropdown__list a.active {
+  text-decoration: underline solid;
+}
+
+@media (min-width: 535px) {
+  #welcome-bird {
+    top: 80px;
+    right: 275px;
+  }
+  #welcome-bird::before {
+    width: 112px;
+    height: 112px;
+    top: -91px;
+    right: -35px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

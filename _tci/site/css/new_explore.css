@@ -1,0 +1,192 @@
+#explore-filters {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+#explore-filters #explore-filters__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px dotted #a2a2a2;
+  border-radius: 1.25rem;
+  font-size: 0.875rem;
+  padding: 0.5rem;
+  padding-right: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+#explore-filters #explore-filters__button #explore-filters__label:not(:empty) {
+  quotes: '"' '"';
+}
+#explore-filters #explore-filters__button #explore-filters__label:not(:empty):before {
+  content: open-quote;
+}
+#explore-filters #explore-filters__button #explore-filters__label:not(:empty):after {
+  content: close-quote;
+}
+#explore-filters #explore-filters__button > svg {
+  width: 0.7rem;
+  height: 0.7rem;
+  fill: #696969;
+  transform: rotate(-90deg);
+  transition: transform ease 150ms;
+}
+#explore-filters[open] #explore-filters__button, #explore-filters:hover #explore-filters__button {
+  background-color: rgba(191, 191, 191, 0.2901960784);
+}
+#explore-filters[open] #explore-filters__button > svg {
+  transform: rotate(0);
+}
+#explore-filters #explore-filters__filters {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8rem;
+  row-gap: 2rem;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+#explore-filters #explore-filters__filters section {
+  padding-left: 0.125rem;
+}
+#explore-filters #explore-filters__filters button {
+  cursor: pointer;
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 0.125rem 0;
+}
+#explore-filters #explore-filters__filters button:hover, #explore-filters #explore-filters__filters button.active {
+  color: black;
+  background-color: yellow;
+}
+#explore-filters #explore-filters__filters h2 {
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+
+.explore-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+.explore-blocks .box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  height: 270px;
+  padding: 0.625rem;
+  border: 1px dotted transparent;
+  text-decoration: none;
+  line-height: 1.3rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.explore-blocks .box:hover {
+  border-style: solid;
+}
+.explore-blocks .box > .type {
+  padding: 2px 4px;
+  align-self: flex-start;
+  margin-bottom: -0.5rem;
+}
+.explore-blocks .box > .date {
+  flex: 1;
+  display: flex;
+  align-items: end;
+}
+.explore-blocks .box.wisdom, .explore-blocks .box.note, .explore-blocks .box.transmission, .explore-blocks .box.pdf, .explore-blocks .box.focus, .explore-blocks .box.series, .explore-blocks .box.guide, .explore-blocks .box.essay, .explore-blocks .box.book, .explore-blocks .box.weekend {
+  border-color: var(--border-color);
+}
+.explore-blocks .box.essay, .explore-blocks .box.book, .explore-blocks .box.weekend {
+  color: white;
+  background-color: black;
+}
+.explore-blocks .box.note .type, .explore-blocks .box.series .type, .explore-blocks .box.guide .type, .explore-blocks .box.wisdom .type, .explore-blocks .box.transmission .type {
+  color: white;
+  background: black;
+}
+.explore-blocks .box.book .type, .explore-blocks .box.weekend .type, .explore-blocks .box.approach .type, .explore-blocks .box.essay .type {
+  color: black;
+  background: white;
+}
+.explore-blocks .box.guide {
+  background-color: var(--guides-color);
+}
+.explore-blocks .box.approach {
+  color: white;
+  background-color: var(--approaches-color);
+}
+.explore-blocks .box.question {
+  color: white;
+  background-color: var(--questions-color);
+}
+.explore-blocks .box.transmission {
+  background-color: var(--transmissions-color);
+}
+.explore-blocks .box.focus {
+  color: white;
+  background-color: color-mix(in srgb, var(--focuses-color) 90%, black 10%);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.explore-blocks .box.big {
+  font-size: 1.375rem;
+  line-height: 29px;
+}
+.explore-blocks .box.snail {
+  padding: 0;
+}
+.explore-blocks .box.snail > video {
+  filter: grayscale(100);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.explore-blocks .box.snail > video:hover {
+  filter: none;
+}
+
+.explore-blocks.guides .box .title {
+  color: #F8F8EA;
+  background-color: #2f2f2f;
+  padding: 3px 6px;
+  box-decoration-break: clone;
+}
+.explore-blocks.guides .box .author-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: end;
+}
+.explore-blocks.guides .box .author {
+  color: #2f2f2f;
+  background-color: #F8F8EA;
+  padding: 3px 6px;
+  border: 1px dotted #000;
+}
+
+.explore-blocks.focuses .box {
+  border: none;
+}
+.explore-blocks.focuses .box:hover {
+  color: #434B57;
+  background-color: white;
+}
+
+.explore-blocks.approaches .box,
+.explore-blocks.tips .box,
+.explore-blocks.wisdoms .box,
+.explore-blocks.questions .box {
+  border-color: var(--border-color);
+}
+
+@media screen and (min-width: 640px) {
+  .explore-blocks .box {
+    width: 270px;
+  }
+}
+
+/*# sourceMappingURL=new_explore.css.map */

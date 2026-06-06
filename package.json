@@ -1,0 +1,16 @@
+{
+  "name": "really-up-there-mirror",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Really Up There© (reallyupthere.com) · Brandon Herbel 포트폴리오 정확 재현 미러 — 원본 마크업/CSS/에셋/인터랙션 1:1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "python3 -m http.server 5500"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}
